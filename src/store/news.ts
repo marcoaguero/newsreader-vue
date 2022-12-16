@@ -14,7 +14,7 @@ export const useNewsStore = defineStore("news", {
           url: "https://api.newscatcherapi.com/v2/search",
           params: { q: "Bitcoin", lang: "en", sort_by: "relevancy", page: "1" },
           headers: {
-            "x-api-key": "mJQi-2gPlkeT_tQBRPzVtAiAm2XaaGu2SvnbMHKND84",
+            "x-api-key": "ZmMXB7xTV-7YslejYw2LkZgY19LdgXYQbWdJbf5MqvY",
           },
         };
         let data = await axios.request(options);
