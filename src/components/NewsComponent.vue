@@ -8,7 +8,7 @@ const news = newsStore.news.filter((news) => news._id == props.dataid);
 </script>
 
 <template>
-  <div class="col-3">
+  <div class="col-3 h-25">
     <a
       :href="news[0].link"
       target="_blank"

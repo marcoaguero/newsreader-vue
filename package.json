@@ -8,10 +8,12 @@
     "build-only": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "gh-pages": "^4.0.0",
     "pinia": "^2.0.27",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",

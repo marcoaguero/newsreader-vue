@@ -19,10 +19,7 @@ export const useNewsStore = defineStore("news", {
         };
         let data = await axios.request(options);
         this.news = data.data.articles;
-        console.log(this.news.length);
         console.log(this.news);
-        console.log(typeof this.news);
-        console.log(this.news[0]);
       } catch (error) {
         alert(error);
         console.log(error);
