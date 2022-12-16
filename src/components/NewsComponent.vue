@@ -2,10 +2,6 @@
 import { useNewsStore } from "../store/news";
 const props = defineProps({
   dataid: String,
-  title: String,
-  userid: Number,
-  summary: String,
-  media: String,
 });
 const newsStore = useNewsStore();
 const news = newsStore.news.filter((news) => news._id == props.dataid);
@@ -13,7 +9,17 @@ const news = newsStore.news.filter((news) => news._id == props.dataid);
 
 <template>
   <div class="col-3">
-    <img :src="media" alt="" class="d-block w-100 position-relative" />
-    <p>{{ title }}</p>
+    <a
+      :href="news[0].link"
+      target="_blank"
+      class="link-secondary text-decoration-none"
+    >
+      <img
+        :src="news[0].media"
+        alt=""
+        class="d-block w-100 position-relative"
+      />
+      <p>{{ news[0].title }}</p></a
+    >
   </div>
 </template>

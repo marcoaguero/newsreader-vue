@@ -18,9 +18,6 @@ newsStore.getNews();
         v-for="news in newsStore.news"
         :key="news._id"
         :dataid="news._id"
-        :title="news.title"
-        :summary="news.summary"
-        :media="news.media"
       ></NewsComponent>
     </div>
   </div>
