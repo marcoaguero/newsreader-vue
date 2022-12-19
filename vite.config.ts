@@ -11,5 +11,5 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  base: "newsreader-vue.git",
+  base: "/newsreader-vue.git/",
 });
