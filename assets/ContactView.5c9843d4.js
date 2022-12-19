@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as t,c as e,a as c}from"./index.4c1af27c.js";const s={},n={class:""},a=c("h1",null,"Contact form",-1),r=[a];function _(i,d){return t(),e("div",n,r)}const m=o(s,[["render",_]]);export{m as default};

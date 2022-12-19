@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as e,c as t,a as s}from"./index.d303bd41.js";const a={},c={class:""},r=s("h1",null,"2 paragraphs about author",-1),_=[r];function n(i,d){return e(),t("div",c,_)}const l=o(a,[["render",n]]);export{l as default};
