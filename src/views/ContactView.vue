@@ -1,34 +1,45 @@
 <script lang="ts">
+import { useUserStore } from "../store/contact";
+
+const store = useUserStore();
+console.log(store.name);
 export default {
   data() {
     return {
-      name: (String = ""),
-      email: (String = ""),
-      text: (String = ""),
+      nameInput: "",
+      emailInput: "",
+      textInput: "",
     };
   },
-  computed: {
-    formValid() {
-      const { name, email, message } = this;
-      return (
-        name.length > 0 &&
-        /(.+)@(.+){2,}\.(.+){2,}/.test(email) &&
-        message.length > 0
-      );
+  methods: {
+    handleSubmit() {
+      store.setUserInfo(this.emailInput, this.nameInput, this.textInput);
     },
   },
 };
+
+//   computed: {
+//     formValid() {
+//       const { name, email, message } = this;
+//       return (
+//         name.length > 0 &&
+//         /(.+)@(.+){2,}\.(.+){2,}/.test(email) &&
+//         message.length > 0
+//       );
+//     },
+//   },
+// };
 </script>
 
 <template>
   <div class="container col-md-4 col">
     <div class="text-center"><h1>Contact form</h1></div>
     <div>
-      <form>
+      <form @submit.prevent="handleSubmit">
         <div class="form-group">
           <label for="emailContact">Email</label>
           <input
-            v-model="email"
+            v-model="emailInput"
             type="text"
             class="form-control"
             id="formGroupExampleInput"
@@ -38,7 +49,7 @@ export default {
         <div class="form-group">
           <label for="nameContact">Name</label>
           <input
-            v-model="name"
+            v-model="nameInput"
             type="text"
             class="form-control"
             id="formGroupExampleInput2"
@@ -48,7 +59,7 @@ export default {
         <div class="form-group">
           <label for="textContact">Message</label>
           <textarea
-            v-model="text"
+            v-model="textInput"
             type="text"
             class="form-control"
             id="exampleFormControlTextarea1"
@@ -57,8 +68,8 @@ export default {
           ></textarea>
         </div>
         <button
-          @submit=""
-          :disabled="!email || !name || !text"
+          type="submit"
+          :disabled="!emailInput || !nameInput || !textInput"
           class="btn btn-primary float-right"
         >
           Submit
