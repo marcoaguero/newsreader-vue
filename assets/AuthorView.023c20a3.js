@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as t,c,a as e}from"./index.527a7dab.js";const s={},a={class:"container col-md-4 col"},r=e("div",{class:"text-center"},[e("h1",null,"2 paragraphs about author")],-1),n=[r];function _(i,d){return t(),c("div",a,n)}const f=o(s,[["render",_]]);export{f as default};
