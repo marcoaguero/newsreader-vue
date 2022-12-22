@@ -5,7 +5,13 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <RouterLink to="/" class="navbar-brand">Logo</RouterLink>
+      <RouterLink to="/" class="navbar-brand"
+        ><img
+          alt="News logo"
+          width="32"
+          height="32"
+          src="../assets/newsreader_logo.png"
+      /></RouterLink>
       <button
         class="navbar-toggler"
         type="button"
