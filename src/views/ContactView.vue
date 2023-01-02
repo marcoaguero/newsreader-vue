@@ -43,7 +43,7 @@ export default {
             type="text"
             class="form-control"
             id="formGroupExampleInput"
-            placeholder="email@gmail.com"
+            placeholder="email@domain.com"
           />
         </div>
         <div class="form-group">

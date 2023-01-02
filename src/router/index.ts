@@ -22,6 +22,12 @@ const router = createRouter({
       name: "contact",
       component: () => import("../views/ContactView.vue"),
     },
+    ,
+    {
+      path: "/:id",
+      name: "Detail",
+      component: () => import("../views/NewsDetailsView.vue"),
+    },
   ],
 });
 

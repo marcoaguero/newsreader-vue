@@ -1,25 +1,23 @@
 <script setup lang="ts">
 import { useNewsStore } from "../store/news";
 const props = defineProps({
-  dataid: String,
+  dataid: Number,
 });
 const newsStore = useNewsStore();
-const news = newsStore.news.filter((news) => news._id == props.dataid);
+const newsList = newsStore.newsList.filter(
+  (newsList) => newsList.id == props.dataid
+);
 </script>
 
 <template>
   <div class="col-3 h-25">
-    <a
-      :href="news[0].link"
-      target="_blank"
-      class="link-secondary text-decoration-none"
-    >
+    <router-link :to="`/${dataid}`" class="link-secondary text-decoration-none">
       <img
-        :src="news[0].media"
+        :src="newsList[0].jetpack_featured_media_url"
         alt=""
         class="d-block w-100 position-relative"
       />
-      <p>{{ news[0].title }}</p></a
+      <p>{{ newsList[0].title.rendered }}</p></router-link
     >
   </div>
 </template>
