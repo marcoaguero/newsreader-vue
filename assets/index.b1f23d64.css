@@ -1,4 +1,4 @@
-@charset "UTF-8";/*!
+@charset "UTF-8";.img-cover{height:450px;object-fit:cover;transition:.7s}.news-title{position:absolute;bottom:0;text-shadow:2px 2px 4px #000000;transition:.7s}@media (min-width: 1281px){.img-cover{opacity:.75}.hover-effect:hover .img-cover,.hover-effect:hover .news-title{opacity:1}.news-title{opacity:0}}/*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
