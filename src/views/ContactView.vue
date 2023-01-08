@@ -1,8 +1,8 @@
 <script lang="ts">
 import { useUserStore } from "../store/contact";
 
-const store = useUserStore();
-console.log(store.name);
+const userStore = useUserStore();
+console.log(userStore.name);
 export default {
   data() {
     return {
@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      store.setUserInfo(this.emailInput, this.nameInput, this.textInput);
+      userStore.setUserInfo(this.emailInput, this.nameInput, this.textInput);
     },
   },
 };
@@ -36,18 +36,18 @@ export default {
     <div class="text-center"><h1>Contact form</h1></div>
     <div>
       <form @submit.prevent="handleSubmit">
-        <div class="form-group">
-          <label for="emailContact">Email</label>
+        <div class="mb-3">
+          <label for="emailContact" class="form-label">Email</label>
           <input
             v-model="emailInput"
-            type="text"
+            type="email"
             class="form-control"
             id="formGroupExampleInput"
             placeholder="email@domain.com"
           />
         </div>
-        <div class="form-group">
-          <label for="nameContact">Name</label>
+        <div class="mb-3">
+          <label for="nameContact" class="form-label">Name</label>
           <input
             v-model="nameInput"
             type="text"
@@ -56,8 +56,8 @@ export default {
             placeholder="Name"
           />
         </div>
-        <div class="form-group">
-          <label for="textContact">Message</label>
+        <div class="mb-3">
+          <label for="textContact" class="form-label">Message</label>
           <textarea
             v-model="textInput"
             type="text"

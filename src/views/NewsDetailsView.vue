@@ -7,6 +7,7 @@ newsStore.getNews();
 const newsDetail = newsStore.newsList.filter(
   (newsList) => newsList.id == urlId
 );
+const fixedContent = newsDetail[0].content.rendered.replace(/<\/?[^>]+>/gi, "");
 console.log(newsDetail[0]);
 </script>
 
@@ -23,7 +24,7 @@ console.log(newsDetail[0]);
       <h1>{{ newsDetail[0].title.rendered }}</h1>
     </div>
     <div class="my-2 my-md-4 text-muted">
-      {{ newsDetail[0].content.rendered }}
+      {{ fixedContent }}
     </div>
   </div>
   <!-- <div class="container col-md-4 col text-center">
